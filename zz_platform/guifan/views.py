@@ -33,14 +33,18 @@ def guifan(request):
         os.makedirs(os.path.join(DOCER_DIR,images_name))
     #移动zip包导挂载目录
     shutil.copy(os.path.join(DOCER_DIR,'guifan.zip'),os.path.join(DOCER_DIR,images_name))
-    os.system(f"unzip {os.path.join(os.path.join(DOCER_DIR,images_name),'guifan.zip')} ")
-    docker_run_cmd = f"docker run -itd --runtime=nvidia --privileged -v /dockerdata/AppData:/data -v {os.path.join(DOCER_DIR,images_name)}:/zhengzhong  -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(DOCER_DIR,'tmp/docker_id.txt')}"
+    os.system(f"unzip {os.path.join(os.path.join(DOCER_DIR,images_name),'guifan.zip')} -d {os.path.join(DOCER_DIR,images_name)}")
+    docker_run_cmd = f"docker run -itd --runtime=nvidia --privileged -v /dockerdata/AppData:/data -v {os.path.join(DOCER_DIR,images_name)}:/zhengzhong  -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(BASE_DIR,'tmp/docker_id.txt')}"
     os.system(docker_run_cmd)
     #运行容器
-    with open(os.path.join(DOCER_DIR,"tmp/docker_id.txt"), 'r') as f:
+    with open(os.path.join(BASE_DIR,"tmp/docker_id.txt"), 'r') as f:
         docker_id = f.readlines()[-1][0:6]
+    response["docker_id"] = docker_id
     os.system("docker exec -it %s python3 /zhengzhong/auto_test.py" % (docker_id))
-    response["msg"] = "算法规范测试中"
+    response["msg"] = "算法规范已完成，请去查看结果"
+    response["res_jpg"] = os.path.join(os.path.join(DOCER_DIR,images_name),'res_jpg')
+    response["dynamiv_res"] = os.path.join(os.path.join(DOCER_DIR, images_name), 'dynamiv_res')
+    response["project_res"] = os.path.join(os.path.join(DOCER_DIR, images_name), 'project_res.txt')
     return  JsonResponse(response)
 
 #下载文件
