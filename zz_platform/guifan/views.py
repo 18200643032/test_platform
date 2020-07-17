@@ -40,6 +40,7 @@ def guifan(request):
     with open(os.path.join(DOCER_DIR,"tmp/docker_id.txt"), 'r') as f:
         docker_id = f.readlines()[-1][0:6]
     os.system("docker exec -it %s python3 /zhengzhong/auto_test.py" % (docker_id))
+    response["msg"] = "算法规范测试中"
     return  JsonResponse(response)
 
 #下载文件
