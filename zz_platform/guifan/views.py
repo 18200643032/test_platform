@@ -6,10 +6,12 @@ from django.views.decorators.http import require_http_methods #判断状态
 from django.http import JsonResponse #返回JSON
 import json,os
 from django.http import FileResponse
+import shutil
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILE_DIR = os.path.join(BASE_DIR, "download_file")
 UPLOAD_DIR = os.path.join(BASE_DIR,"upload_file")
+DOCER_DIR = os.path.join(BASE_DIR,"docker")
 
 @require_http_methods(["POST"])
 def guifan(request):
@@ -19,10 +21,25 @@ def guifan(request):
     if len(images.split(' ')) > 1:
         response["msg"] = "镜像名有误"
         return JsonResponse(response)
-
-    # os.system(f"docker pull {images}")
-
-
+    if not os.system(f"docker pull {images}"):
+        response["list"] = images
+    else:
+        response["list"] = "镜像名不存在"
+    #生成容器，挂载规范目录
+    images_name = images.split(":")[0].split("/")[-1]
+    if os.path.exists(os.path.join(DOCER_DIR,images_name)):
+        pass
+    else:
+        os.makedirs(os.path.join(DOCER_DIR,images_name))
+    #移动zip包导挂载目录
+    shutil.copy(os.path.join(DOCER_DIR,'guifan.zip'),os.path.join(DOCER_DIR,images_name))
+    os.system(f"unzip {os.path.join(DOCER_DIR,images_name)} -d /zhengzhong")
+    docker_run_cmd = f"docker run -itd --runtime=nvidia --privileged -v /dockerdata/AppData:/data -v {os.path.join(DOCER_DIR,images_name)}:/zhengzhong  -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(DOCER_DIR,'tmp/docker_id.txt')}"
+    os.system(docker_run_cmd)
+    #运行容器
+    with open(os.path.join(DOCER_DIR,"tmp/docker_id.txt"), 'r') as f:
+        docker_id = f.readlines()[-1][0:6]
+    os.system("docker exec -it %s python3 /zhengzhong/auto_test.py" % (docker_id))
     return  JsonResponse(response)
 
 #下载文件
