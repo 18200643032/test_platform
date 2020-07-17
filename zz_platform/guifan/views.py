@@ -45,6 +45,8 @@ def guifan(request):
     response["res_jpg"] = os.path.join(os.path.join(DOCER_DIR,images_name),'res_jpg')
     response["dynamiv_res"] = os.path.join(os.path.join(DOCER_DIR, images_name), 'dynamiv_res')
     response["project_res"] = os.path.join(os.path.join(DOCER_DIR, images_name), 'project_res.txt')
+    os.system(f"tar zcvf {os.path.join(BASE_DIR,'res.tar.gz')} {os.path.join(os.path.join(DOCER_DIR,images_name),'res_jpg')} {os.path.join(os.path.join(DOCER_DIR, images_name), 'dynamiv_res')} {os.path.join(os.path.join(DOCER_DIR, images_name), 'project_res.txt')}")
+    response["res_path"] = os.path.join(BASE_DIR,'res.tar.gz')
     return  JsonResponse(response)
 
 #下载文件
@@ -53,7 +55,7 @@ def file_download(request):
     res = {}
     try:
         filename = request.GET.get('file')
-        filepath = os.path.join(FILE_DIR, filename)
+        filepath = os.path.join(BASE_DIR, filename)
         fp = open(filepath, 'rb')
         response = StreamingHttpResponse(fp)
         response['Content-Type'] = 'application/octet-stream'
