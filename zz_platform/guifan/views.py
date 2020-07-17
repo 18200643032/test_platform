@@ -62,12 +62,20 @@ def file_download(request):
         response['Content-Disposition'] = 'attachment;filename="%s"' % filename
         res["code"] = 200
         res["msg"] = "下载成功"
-        return JsonResponse(res)
+        return response
+        # return JsonResponse(res)
     except Exception as e:
         res["code"] = 203
         res["msg"] = str(e)
         return JsonResponse(res)
-
+def send_file(fullfilename):
+    store_path = fullfilename
+    with open(store_path, 'rb') as targetfile:
+        while 1:
+            data = targetfile.read(20 * 1024 )  # 每次读取20M
+            if not data:
+                break
+            yield data
 #复制文件到本地
 @require_http_methods(["GET"])
 def scp_file(request):
