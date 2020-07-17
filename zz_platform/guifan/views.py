@@ -33,7 +33,7 @@ def guifan(request):
         os.makedirs(os.path.join(DOCER_DIR,images_name))
     #移动zip包导挂载目录
     shutil.copy(os.path.join(DOCER_DIR,'guifan.zip'),os.path.join(DOCER_DIR,images_name))
-    os.system(f"unzip {os.path.join(DOCER_DIR,images_name)} -d /zhengzhong")
+    os.system(f"unzip {os.path.join(os.path.join(DOCER_DIR,images_name),'guifan.zip')} ")
     docker_run_cmd = f"docker run -itd --runtime=nvidia --privileged -v /dockerdata/AppData:/data -v {os.path.join(DOCER_DIR,images_name)}:/zhengzhong  -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(DOCER_DIR,'tmp/docker_id.txt')}"
     os.system(docker_run_cmd)
     #运行容器
