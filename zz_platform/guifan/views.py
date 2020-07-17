@@ -40,7 +40,7 @@ def guifan(request):
     with open(os.path.join(BASE_DIR,"tmp/docker_id.txt"), 'r') as f:
         docker_id = f.readlines()[-1][0:6]
     response["docker_id"] = docker_id
-    os.system("docker exec -it %s python3 /zhengzhong/auto_test.py" % (docker_id))
+    os.system("docker exec -it %s python3 /zhengzhong/auto_run.py" % (docker_id))
     response["msg"] = "算法规范已完成，请去查看结果"
     response["res_jpg"] = os.path.join(os.path.join(DOCER_DIR,images_name),'res_jpg')
     response["dynamiv_res"] = os.path.join(os.path.join(DOCER_DIR, images_name), 'dynamiv_res')
@@ -65,6 +65,16 @@ def file_download(request):
         res["code"] = 203
         res["msg"] = str(e)
         return JsonResponse(res)
+
+#复制文件到本地
+@require_http_methods(["GET"])
+def scp_file(request):
+    res = {}
+    old_filename = request.GET.get("old_path")
+    new_filename = request.GET.get("new_path")
+
+
+
 
 #上传文件
 @require_http_methods(["POST"])
