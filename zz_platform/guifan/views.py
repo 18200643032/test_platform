@@ -63,7 +63,7 @@ def file_download(request):
         res["code"] = 200
         res["msg"] = "下载成功"
         return response
-        # return JsonResponse(res)
+        # return
     except Exception as e:
         res["code"] = 203
         res["msg"] = str(e)
