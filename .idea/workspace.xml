@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16e73717-fb3d-4789-95d5-d048a967f024" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/test_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test_platform.iml" afterDir="false" />
+    <list default="true" id="16e73717-fb3d-4789-95d5-d048a967f024" name="Default Changelist" comment="&quot;登录视图1&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zz_platform/docker/guifan.zip" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/docker/guifan.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/guifan/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/zz_platform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/zz_platform/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,8 +63,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zz_platform/login/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="297">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -211,7 +207,7 @@
       <updated>1594780457345</updated>
       <workItem from="1594780458563" duration="13238000" />
       <workItem from="1594870248989" duration="648000" />
-      <workItem from="1594871035647" duration="29940000" />
+      <workItem from="1594871035647" duration="30531000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;创建django项目&quot;">
       <created>1594780767441</created>
@@ -297,17 +293,31 @@
       <option name="project" value="LOCAL" />
       <updated>1594980722258</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="&quot;更新规范包&quot;">
+      <created>1595323879987</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1595323879987</updated>
+    </task>
+    <task id="LOCAL-00014" summary="&quot;登录视图1&quot;">
+      <created>1595324152917</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1595324152917</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43826000" />
+    <option name="totallyTimeSpent" value="44417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="628" y="-2" width="1312" height="830" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19808307" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19808307" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -321,7 +331,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.9225251" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007987" side_tool="true" weight="0.32424676" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49920127" visible="true" weight="0.31420374" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49920127" visible="true" weight="0.31420374" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -390,7 +400,9 @@
     <MESSAGE value="&quot;添加上传和下载的功能&quot;" />
     <MESSAGE value="&quot;运行容器配置&quot;" />
     <MESSAGE value="&quot;算法规范完成&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;算法规范完成&quot;" />
+    <MESSAGE value="&quot;更新规范包&quot;" />
+    <MESSAGE value="&quot;登录视图1&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;登录视图1&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/zz_platform/file/123.jpg" />
@@ -503,8 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/zz_platform/login/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="297">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
