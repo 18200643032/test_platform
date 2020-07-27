@@ -108,12 +108,12 @@ def file_upload(request):
 def opencv(request):
     res = {}
     images = request.POST.get("images")
-    docker_run_cmd = f"docker run -itd --runtime=nvidia --rm --privileged -v /dockerdata/AppData:/data  -v {os.path.join(DOCER_DIR,opencv)}:/zhengzhong -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(BASE_DIR,'tmp/docker_id.txt')}"
+    docker_run_cmd = f"docker run -itd --runtime=nvidia --rm --privileged -v /dockerdata/AppData:/data  -v {OPENCV_DIR}:/zhengzhong -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(BASE_DIR,'tmp/docker_id.txt')}"
     os.system(docker_run_cmd)
     with open(os.path.join(BASE_DIR,"tmp/docker_id.txt"), 'r') as f:
         docker_id = f.readlines()[-1][0:6]
     os.system(f"docker exec -it {docker_id} python3 /zhengzhong/opencv.py")
-    with open(os.path.join(BASE_DIR,opencv+"res.txt"),"r") as q:
+    with open(os.path.join(OPENCV_DIR,"res.txt"),"r") as q:
         r = q.read()
     res["opencv"] = r
     return  JsonResponse(res)
