@@ -11,6 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 FILE_DIR = os.path.join(BASE_DIR, "download_file")
 UPLOAD_DIR = os.path.join(BASE_DIR,"upload_file")
 DOCER_DIR = os.path.join(BASE_DIR,"docker")
+OPENCV_DIR = os.path.join(BASE_DIR,"opencv")
 
 @require_http_methods(["POST"])
 def guifan(request):
@@ -101,4 +102,21 @@ def file_upload(request):
     res["code"] = 200
     res["msg"] = "上传成功"
     return JsonResponse(res)
+
+
+@require_http_methods(["POST"])
+def opencv(request):
+    res = {}
+    images = request.POST.get("images")
+    docker_run_cmd = f"docker run -itd --runtime=nvidia --rm --privileged -v /dockerdata/AppData:/data  -v {os.path.join(DOCER_DIR,opencv)}:/zhengzhong -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(BASE_DIR,'tmp/docker_id.txt')}"
+    os.system(docker_run_cmd)
+    with open(os.path.join(BASE_DIR,"tmp/docker_id.txt"), 'r') as f:
+        docker_id = f.readlines()[-1][0:6]
+    os.system(f"docker exec -it {docker_id} python3 /zhengzhong/opencv.py")
+    with open(os.path.join(BASE_DIR,opencv+"res.txt"),"r") as q:
+        r = q.read()
+    res["opencv"] = r
+    return  JsonResponse(res)
+
+
 

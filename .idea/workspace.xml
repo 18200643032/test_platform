@@ -1,29 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16e73717-fb3d-4789-95d5-d048a967f024" name="Default Changelist" comment="&quot;注册&quot;">
-      <change beforePath="$PROJECT_DIR$/.idea/test_platform.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/test_platform.iml" afterDir="false" />
+    <list default="true" id="16e73717-fb3d-4789-95d5-d048a967f024" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/guifan/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/login/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/login/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/login/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/login/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/login/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/login/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/login/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/login/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/login/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/zz_platform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/zz_platform/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zz_platform/apps/guifan/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/apps/guifan/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zz_platform/apps/guifan/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/apps/guifan/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            <state relative-caret-position="405">
+              <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
               <folding>
                 <element signature="e#321#330#0" expanded="true" />
               </folding>
@@ -49,19 +30,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zz_platform/templates/1.html">
+        <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            <state relative-caret-position="194">
+              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+              <folding>
+                <element signature="e#635#667#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="189">
-              <caret line="8" column="1" selection-end-line="8" selection-end-column="1" />
+              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -72,11 +56,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+            <state relative-caret-position="271">
+              <caret line="107" column="20" lean-forward="true" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zz_platform/opencv/opencv.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -165,7 +158,6 @@
         <option value="$PROJECT_DIR$/zz_platform/guifan/views.py" />
         <option value="$PROJECT_DIR$/zz_platform/guifan/admin.py" />
         <option value="$PROJECT_DIR$/zz_platform/login/admin.py" />
-        <option value="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" />
         <option value="$PROJECT_DIR$/zz_platform/login/models.py" />
         <option value="$PROJECT_DIR$/zz_platform/login/urls.py" />
         <option value="$PROJECT_DIR$/zz_platform/templates/1.html" />
@@ -173,8 +165,11 @@
         <option value="$PROJECT_DIR$/zz_platform/ias/urls.py" />
         <option value="$PROJECT_DIR$/zz_platform/ias/views.py" />
         <option value="$PROJECT_DIR$/zz_platform/apps/ias/urls.py" />
-        <option value="$PROJECT_DIR$/zz_platform/apps/guifan/views.py" />
         <option value="$PROJECT_DIR$/zz_platform/zz_platform/settings.py" />
+        <option value="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" />
+        <option value="$PROJECT_DIR$/zz_platform/opencv/opencv.py" />
+        <option value="$PROJECT_DIR$/zz_platform/apps/guifan/views.py" />
+        <option value="$PROJECT_DIR$/zz_platform/apps/guifan/urls.py" />
       </list>
     </option>
   </component>
@@ -207,6 +202,19 @@
               <item name="test_platform" type="462c0819:PsiDirectoryNode" />
               <item name="zz_platform" type="462c0819:PsiDirectoryNode" />
               <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="zz_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+              <item name="guifan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="zz_platform" type="462c0819:PsiDirectoryNode" />
+              <item name="tmp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -292,7 +300,7 @@
       <workItem from="1594780458563" duration="13238000" />
       <workItem from="1594870248989" duration="648000" />
       <workItem from="1594871035647" duration="40029000" />
-      <workItem from="1595554076192" duration="1632000" />
+      <workItem from="1595554076192" duration="4428000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;创建django项目&quot;">
       <created>1594780767441</created>
@@ -399,11 +407,32 @@
       <option name="project" value="LOCAL" />
       <updated>1595324467791</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="&quot;迁移到APP里&quot;">
+      <created>1595819610952</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1595819610952</updated>
+    </task>
+    <task id="LOCAL-00017" summary="&quot;迁移到APP里&quot;">
+      <created>1595819653363</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1595819653363</updated>
+    </task>
+    <task id="LOCAL-00018" summary="&quot;迁移到APP里&quot;">
+      <created>1595820373977</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1595820373977</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55547000" />
+    <option name="totallyTimeSpent" value="58343000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -414,7 +443,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32998565" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23943663" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23943663" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -423,7 +452,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.9225251" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007987" side_tool="true" weight="0.32424676" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49920127" weight="0.1928494" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49920127" visible="true" weight="0.19826652" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -494,7 +523,8 @@
     <MESSAGE value="&quot;算法规范完成&quot;" />
     <MESSAGE value="&quot;登录视图1&quot;" />
     <MESSAGE value="&quot;更新规范包&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;更新规范包&quot;" />
+    <MESSAGE value="&quot;迁移到APP里&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;迁移到APP里&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/zz_platform/file/123.jpg" />
@@ -545,16 +575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="23" column="23" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="23" />
-          <folding>
-            <element signature="e#635#667#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zz_platform/tmp/1.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -562,16 +582,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="8" column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -622,22 +632,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+          <folding>
+            <element signature="e#321#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+          <folding>
+            <element signature="e#635#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/opencv/opencv.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/opencv/opencv.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        <state relative-caret-position="271">
+          <caret line="107" column="20" lean-forward="true" selection-start-line="107" selection-start-column="20" selection-end-line="107" selection-end-column="20" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/settings.py">
+    <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="40" column="13" lean-forward="true" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        <state relative-caret-position="189">
+          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding>
-            <element signature="e#321#330#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
