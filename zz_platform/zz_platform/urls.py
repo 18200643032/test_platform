@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,re_path,include
-import urls as guifan_urls
-import urls as login_urls
+import guifan.urls as guifan_urls
+import login.urls as login_urls
 
 urlpatterns = [
     path('admin/', admin.site.urls),
