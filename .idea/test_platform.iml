@@ -2,9 +2,11 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/zz_platform/guifan" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/zz_platform/apps/guifan" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/zz_platform" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/zz_platform/login" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/zz_platform/apps/login" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/zz_platform/apps" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/zz_platform/apps/ias" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.7 (book_env) (2)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
