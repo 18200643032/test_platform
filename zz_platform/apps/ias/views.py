@@ -30,11 +30,10 @@ def ias(request):
     else:
         contain_id = res_p.stdout.readline().decode('utf-8')[:8] #容器ID
 
-    ias_install = f"docker exec  {contain_id} bash /home/give_license.sh &"
     data = {
         "images":image_name
     }
-    ias_ver = requests.post("127.0.0.1:8888/api/opencv/",data=data).json().get("opencv版本")
+    ias_ver = requests.post("http://192.168.1.147:8888/api/opencv/",data=data).json().get("opencv版本")
     if ias_ver == "4.1":
         cmd = f"cp {path}/sdk_package/ias/ias_4.1.tar.gz /home/zheng;tar -xvf /home/zheng/ias_4.1.tar.gz -C /home/zheng"
         res_p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -55,6 +54,7 @@ def ias(request):
     res_p = subprocess.Popen(ias_install, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     res["errno"] = RET.OK
     res["errmsg"] = "封装ias成功"
+    res["ias的版本是"] = ias_ver
 
     return JsonResponse(res)
 
