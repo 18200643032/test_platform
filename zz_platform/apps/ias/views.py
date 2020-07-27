@@ -15,7 +15,8 @@ def ias(request):
     :param algo_image:  接收传入的镜像名称:image_name,
     :return:
     """
-    res_datas = request.json
+    res_datas = request.POST
+
     port = res_datas.get('port')
     image_name = res_datas.get('image_name')
 
