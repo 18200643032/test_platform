@@ -115,7 +115,8 @@ def opencv(request):
     os.system(f"docker exec -it {docker_id} python3 /zhengzhong/opencv.py")
     with open(os.path.join(OPENCV_DIR,"res.txt"),"r") as q:
         r = q.read()
-    res["opencv"] = r
+    os.system(f"docker stop {docker_id}")
+    res["opencv版本"] = r
     return  JsonResponse(res)
 
 
