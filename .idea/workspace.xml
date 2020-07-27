@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16e73717-fb3d-4789-95d5-d048a967f024" name="Default Changelist" comment="">
+    <list default="true" id="16e73717-fb3d-4789-95d5-d048a967f024" name="Default Changelist" comment="&quot;添加IAS接口&quot;">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/apps/guifan/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/apps/guifan/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,23 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-              <folding>
-                <element signature="e#321#330#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="194">
-              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="420">
+              <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
               <folding>
                 <element signature="e#635#667#0" expanded="true" />
               </folding>
@@ -41,10 +29,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zz_platform/config/response_codes.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="864">
+              <caret line="32" column="38" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -52,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="119" column="29" lean-forward="true" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
+            <state relative-caret-position="378">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -68,7 +65,7 @@
         <entry file="file://$PROJECT_DIR$/zz_platform/opencv/opencv.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="243">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
@@ -77,7 +74,7 @@
         <entry file="file://$PROJECT_DIR$/zz_platform/apps/ias/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -88,8 +85,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zz_platform/apps/ias/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+            <state relative-caret-position="270">
+              <caret line="10" column="7" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="7" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -165,10 +165,12 @@
         <option value="$PROJECT_DIR$/zz_platform/ias/views.py" />
         <option value="$PROJECT_DIR$/zz_platform/apps/ias/urls.py" />
         <option value="$PROJECT_DIR$/zz_platform/zz_platform/settings.py" />
-        <option value="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" />
         <option value="$PROJECT_DIR$/zz_platform/opencv/opencv.py" />
         <option value="$PROJECT_DIR$/zz_platform/apps/guifan/urls.py" />
         <option value="$PROJECT_DIR$/zz_platform/apps/guifan/views.py" />
+        <option value="$PROJECT_DIR$/zz_platform/config/response_codes.py" />
+        <option value="$PROJECT_DIR$/zz_platform/apps/ias/views.py" />
+        <option value="$PROJECT_DIR$/zz_platform/zz_platform/urls.py" />
       </list>
     </option>
   </component>
@@ -206,20 +208,13 @@
               <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="test_platform" type="462c0819:PsiDirectoryNode" />
               <item name="zz_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="apps" type="462c0819:PsiDirectoryNode" />
-              <item name="guifan" type="462c0819:PsiDirectoryNode" />
+              <item name="sdk_package" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
               <item name="test_platform" type="462c0819:PsiDirectoryNode" />
               <item name="zz_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="opencv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test_platform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test_platform" type="462c0819:PsiDirectoryNode" />
               <item name="zz_platform" type="462c0819:PsiDirectoryNode" />
-              <item name="tmp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,7 +228,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -244,9 +239,12 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\test_platform\zz_platform\sdk_package" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator\Desktop\test_platform\zz_platform\apps" />
       <recent name="C:\Users\Administrator\Desktop\test_platform\zz_platform" />
+      <recent name="C:\Users\Administrator\Desktop\test_platform\zz_platform\apps" />
       <recent name="C:\Users\Administrator\Desktop\test_platform\zz_platform\docker" />
       <recent name="C:\Users\Administrator\Desktop\test_platform\zz_platform\file" />
     </key>
@@ -305,7 +303,7 @@
       <workItem from="1594780458563" duration="13238000" />
       <workItem from="1594870248989" duration="648000" />
       <workItem from="1594871035647" duration="40029000" />
-      <workItem from="1595554076192" duration="6524000" />
+      <workItem from="1595554076192" duration="10144000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;创建django项目&quot;">
       <created>1594780767441</created>
@@ -447,11 +445,25 @@
       <option name="project" value="LOCAL" />
       <updated>1595831270982</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="&quot;添加查看opencv版本接口&quot;">
+      <created>1595832376967</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1595832376967</updated>
+    </task>
+    <task id="LOCAL-00022" summary="&quot;添加IAS接口&quot;">
+      <created>1595844458134</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1595844458134</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60439000" />
+    <option name="totallyTimeSpent" value="64059000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -544,7 +556,8 @@
     <MESSAGE value="&quot;更新规范包&quot;" />
     <MESSAGE value="&quot;迁移到APP里&quot;" />
     <MESSAGE value="&quot;添加查看opencv版本接口&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;添加查看opencv版本接口&quot;" />
+    <MESSAGE value="&quot;添加IAS接口&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;添加IAS接口&quot;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/zz_platform/file/123.jpg" />
@@ -635,50 +648,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zz_platform/apps/ias/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zz_platform/apps/ias/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding>
-            <element signature="e#321#330#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding>
-            <element signature="e#635#667#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zz_platform/opencv/opencv.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -688,16 +664,63 @@
     <entry file="file://$PROJECT_DIR$/zz_platform/opencv/opencv.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="119" column="29" lean-forward="true" selection-start-line="119" selection-start-column="29" selection-end-line="119" selection-end-column="29" />
+        <state relative-caret-position="378">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-594">
+          <caret line="35" column="26" lean-forward="true" selection-start-line="35" selection-start-column="26" selection-end-line="35" selection-end-column="26" />
+          <folding>
+            <element signature="e#321#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/config/response_codes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/apps/ias/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/apps/ias/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/zz_platform/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+          <folding>
+            <element signature="e#635#667#0" expanded="true" />
           </folding>
         </state>
       </provider>
