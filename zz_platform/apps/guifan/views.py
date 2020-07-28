@@ -128,7 +128,7 @@ def img_test(request):
     if not myfile:
         res["msg"] = "没有文件上传"
         return JsonResponse(res)
-    destination = open(os.path.join(UPLOAD_DIR, myfile.name), "wb+")
+    destination = open(os.path.join(TMP_DIR, myfile.name), "wb+")
     for chunk in myfile.chunks():
         destination.write(chunk)
     destination.close()
@@ -143,5 +143,36 @@ def img_test(request):
     pattern_xmin = 'json:.\{(.*)\}'
     res_xmins = "{" + re.findall(pattern_xmin, str(con))[0].replace("\\t", "").replace(" ", "").replace("','", "") + "}"
     res = json.loads(res_xmins)
+    os.system(f"docker stop {docker_id}")
     return JsonResponse(res)
 
+@require_http_methods(["POST"])
+def t1(request):
+    res ={}
+    name_list_images = []
+    myfiles = request.FILES.getlist('myfile', None)  #接收多个文件
+
+    if not myfiles:
+        res["msg"] = "没有文件上传"
+        return JsonResponse(res)
+    for myfile in myfiles:
+        name_list_images.append(myfile.name)
+        destination = open(os.path.join(TMP_DIR, myfile.name), "wb+")
+        for chunk in myfile.chunks():
+            destination.write(chunk)
+        destination.close()
+    images = request.POST.get("images")
+    docker_run_cmd = f"docker run -itd --runtime=nvidia --rm --privileged -v /dockerdata/AppData:/data  -v {TMP_DIR}:/zhengzhong -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(BASE_DIR,'tmp/docker_id.txt')}"
+    os.system(docker_run_cmd)
+    with open(os.path.join(BASE_DIR,"tmp/docker_id.txt"), 'r') as f:
+        docker_id = f.readlines()[-1][0:6]
+    for name in name_list_images:
+        os.system(f"docker exec -it {docker_id} bash /zhengzhong/1.sh {name}&")
+        with open(os.path.join(TMP_DIR,"image_res.txt"),"r") as f:
+            con = f.read().splitlines()
+        pattern_xmin = 'json:.\{(.*)\}'
+        res_xmins = "{" + re.findall(pattern_xmin, str(con))[0].replace("\\t", "").replace(" ", "").replace("','", "") + "}"
+        r = json.loads(res_xmins)
+        res[name] = r
+    os.system(f"docker stop {docker_id}")
+    return JsonResponse(res)
