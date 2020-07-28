@@ -34,9 +34,10 @@ def guifan(request):
     else:
         os.makedirs(os.path.join(DOCER_DIR,images_name))
     #移动zip包导挂载目录
+
     shutil.copy(os.path.join(DOCER_DIR,'guifan.zip'),os.path.join(DOCER_DIR,images_name))
     os.system(f"unzip {os.path.join(os.path.join(DOCER_DIR,images_name),'guifan.zip')} -d {os.path.join(DOCER_DIR,images_name)}")
-    os.system(f"cp {os.path.join(TMP_DIR,image_name)} {os.path.join(DOCER_DIR,images_name)}")
+    os.system(f"cp {os.path.join(TMP_DIR,image_name)} {os.path.join(os.path.join(DOCER_DIR,images_name),'1.jpg')}")
     docker_run_cmd = f"docker run -itd --runtime=nvidia --privileged -v /dockerdata/AppData:/data -v {os.path.join(DOCER_DIR,images_name)}:/zhengzhong  -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(BASE_DIR,'tmp/docker_id.txt')}"
     os.system(docker_run_cmd)
     #运行容器
@@ -163,7 +164,7 @@ def t1(request):
             destination.write(chunk)
         destination.close()
     images = request.POST.get("images")
-    docker_run_cmd = f"docker run -it --runtime=nvidia --rm --privileged -v /dockerdata/AppData:/data  -v {TMP_DIR}:/zhengzhong -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(BASE_DIR,'tmp/docker_id.txt')}"
+    docker_run_cmd = f"docker run -itd --runtime=nvidia --rm --privileged -v /dockerdata/AppData:/data  -v {TMP_DIR}:/zhengzhong -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(BASE_DIR,'tmp/docker_id.txt')}"
     os.system(docker_run_cmd)
     with open(os.path.join(BASE_DIR,"tmp/docker_id.txt"), 'r') as f:
         docker_id = f.readlines()[-1][0:6]
