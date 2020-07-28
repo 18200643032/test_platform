@@ -7,6 +7,7 @@ from django.http import JsonResponse #返回JSON
 import subprocess,requests,os
 from config.response_codes import RET
 path= os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) #zz_platform目录
+UPLOAD_DIR = os.path.join(path,"tmp")      #临时存放图片目录
 @require_http_methods(["POST"])
 def ias(request):
     res = {}
@@ -16,7 +17,6 @@ def ias(request):
     :return:
     """
     res_datas = request.POST
-
     port = res_datas.get('port')
     image_name = res_datas.get('image_name')
 
@@ -57,6 +57,10 @@ def ias(request):
     res["ias的版本是"] = ias_ver
 
     return JsonResponse(res)
+
+
+
+
 
 
 

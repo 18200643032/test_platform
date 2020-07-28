@@ -4,7 +4,7 @@ from django.http import StreamingHttpResponse  #文件处理
 from django.views.decorators.http import require_http_methods #判断状态
 from django.http import JsonResponse #返回JSON
 import json,os
-import shutil
+import shutil,re
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -12,6 +12,8 @@ FILE_DIR = os.path.join(BASE_DIR, "download_file")
 UPLOAD_DIR = os.path.join(BASE_DIR,"upload_file")
 DOCER_DIR = os.path.join(BASE_DIR,"docker")
 OPENCV_DIR = os.path.join(BASE_DIR,"opencv")
+
+TMP_DIR = os.path.join(BASE_DIR,"tmp")      #临时存放图片目录
 
 @require_http_methods(["POST"])
 def guifan(request):
@@ -115,9 +117,31 @@ def opencv(request):
     os.system(f"docker exec -it {docker_id} python3 /zhengzhong/opencv.py")
     with open(os.path.join(OPENCV_DIR,"res.txt"),"r") as q:
         r = q.read()
-    os.system(f"docker stop {docker_id}")
+    os.system(f"docker stop {docker_id} &")
     res["opencv版本"] = r
     return  JsonResponse(res)
 
-
+@require_http_methods(["POST"])
+def img_test(request):
+    res ={}
+    myfile = request.FILES.get('myfile', None)
+    if not myfile:
+        res["msg"] = "没有文件上传"
+        return JsonResponse(res)
+    destination = open(os.path.join(UPLOAD_DIR, myfile.name), "wb+")
+    for chunk in myfile.chunks():
+        destination.write(chunk)
+    destination.close()
+    images = request.POST.get("images")
+    docker_run_cmd = f"docker run -itd --runtime=nvidia --rm --privileged -v /dockerdata/AppData:/data  -v {TMP_DIR}:/zhengzhong -e LANG=C.UTF-8 -e NVIDIA_VISIBLE_DEVICES=all {images} >>{os.path.join(BASE_DIR,'tmp/docker_id.txt')}"
+    os.system(docker_run_cmd)
+    with open(os.path.join(BASE_DIR,"tmp/docker_id.txt"), 'r') as f:
+        docker_id = f.readlines()[-1][0:6]
+    os.system(f"docker exec -it {docker_id} bash /zhengzhong/1.sh {myfile.name}&")
+    with open(os.path.join(TMP_DIR,"image_res.txt"),"r") as f:
+        con = f.read().splitlines()
+    pattern_xmin = 'json:.\{(.*)\}'
+    res_xmins = "{" + re.findall(pattern_xmin, str(con))[0].replace("\\t", "").replace(" ", "").replace("','", "") + "}"
+    res = json.loads(res_xmins)
+    return JsonResponse(res)
 
