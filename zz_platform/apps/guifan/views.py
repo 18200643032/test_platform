@@ -30,7 +30,7 @@ def guifan(request):
     #生成容器，挂载规范目录
     images_name = images.split(":")[0].split("/")[-1]
     if os.path.exists(os.path.join(DOCER_DIR,images_name)):
-        pass
+        os.system(f"rm -rf {os.path.join(DOCER_DIR,images_name)}/*")
     else:
         os.makedirs(os.path.join(DOCER_DIR,images_name))
     #移动zip包导挂载目录
@@ -72,6 +72,7 @@ def file_download(request):
         res["code"] = 203
         res["msg"] = str(e)
         return JsonResponse(res)
+
 def send_file(fullfilename):
     store_path = fullfilename
     with open(store_path, 'rb') as targetfile:
@@ -86,9 +87,6 @@ def scp_file(request):
     res = {}
     old_filename = request.GET.get("old_path")
     new_filename = request.GET.get("new_path")
-
-
-
 
 #上传文件
 @require_http_methods(["POST"])

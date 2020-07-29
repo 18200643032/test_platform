@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16e73717-fb3d-4789-95d5-d048a967f024" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="16e73717-fb3d-4789-95d5-d048a967f024" name="Default Changelist" comment="&quot;t1&quot;">
       <change beforePath="$PROJECT_DIR$/zz_platform/apps/guifan/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/zz_platform/apps/guifan/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zz_platform/tmp/1.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,8 +51,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            <state relative-caret-position="270">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -77,10 +75,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="166" column="38" lean-forward="true" selection-start-line="166" selection-start-column="38" selection-end-line="166" selection-end-column="38" />
+            <state relative-caret-position="254">
+              <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#2623#3165#0" />
+                <element signature="e#3199#3416#0" />
+                <element signature="e#3659#4029#0" />
+                <element signature="e#4089#4767#0" />
+                <element signature="e#4830#5197#0" />
+                <element signature="e#6098#7247#0" />
               </folding>
             </state>
           </provider>
@@ -132,6 +136,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>template</find>
+      <find>send_file</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -319,7 +324,7 @@
       <workItem from="1594780458563" duration="13238000" />
       <workItem from="1594870248989" duration="648000" />
       <workItem from="1594871035647" duration="40029000" />
-      <workItem from="1595554076192" duration="30100000" />
+      <workItem from="1595554076192" duration="32231000" />
     </task>
     <task id="LOCAL-00001" summary="&quot;创建django项目&quot;">
       <created>1594780767441</created>
@@ -524,11 +529,18 @@
       <option name="project" value="LOCAL" />
       <updated>1595924746538</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="&quot;t1&quot;">
+      <created>1595929404111</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1595929404111</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84015000" />
+    <option name="totallyTimeSpent" value="86146000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -548,7 +560,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.9225251" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5010661" side_tool="true" weight="0.28060672" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" visible="true" weight="0.28060672" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4989339" visible="true" weight="0.17334779" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -779,25 +791,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/zz_platform/tmp/1.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+        <state relative-caret-position="270">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zz_platform/tmp/1.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/zz_platform/apps/guifan/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="166" column="38" lean-forward="true" selection-start-line="166" selection-start-column="38" selection-end-line="166" selection-end-column="38" />
+        <state relative-caret-position="254">
+          <caret line="30" column="53" lean-forward="true" selection-start-line="30" selection-start-column="53" selection-end-line="30" selection-end-column="53" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#2623#3165#0" />
+            <element signature="e#3199#3416#0" />
+            <element signature="e#3659#4029#0" />
+            <element signature="e#4089#4767#0" />
+            <element signature="e#4830#5197#0" />
+            <element signature="e#6098#7247#0" />
           </folding>
         </state>
       </provider>
