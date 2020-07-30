@@ -105,8 +105,10 @@ def file_upload(request):
     res["msg"] = "上传成功"
     return JsonResponse(res)
 
-
+#判断opencv版本
 @require_http_methods(["POST"])
+
+
 def opencv(request):
     res = {}
     images = request.POST.get("images")
@@ -146,6 +148,7 @@ def img_test(request):
     os.system(f"docker stop {docker_id}")
     return JsonResponse(res)
 
+#查看图片是否报警
 @require_http_methods(["POST"])
 def t1(request):
     res ={}
@@ -176,3 +179,5 @@ def t1(request):
         res[name] = r
     os.system(f"docker stop {docker_id}")
     return JsonResponse(res)
+
+

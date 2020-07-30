@@ -6,6 +6,8 @@ from django.views.decorators.http import require_http_methods #判断状态
 from django.http import JsonResponse #返回JSON
 import subprocess,requests,os
 from config.response_codes import RET
+
+from sdk_precision.run import iter_files, clear_dirs
 path= os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) #zz_platform目录
 UPLOAD_DIR = os.path.join(path,"tmp")      #临时存放图片目录
 @require_http_methods(["POST"])
@@ -61,6 +63,49 @@ def ias(request):
 
 
 
+@require_http_methods(["POST"])
+def get_files_result(request):
+    res = {}
+    file = request.FILE.get("file")
+    tag_names = request.POST.get('tag_name')
+    alert_info = request.POST.get('alert_info')
+    port = request.POST.get('port')
+    tag_names = tag_names.split(",")
+    if not all([tag_names, port]):
+        res["error"] = RET.DATAERR
+        res["errmsg"] = "传入数据不完整"
+        return JsonResponse(res)
+    filename = file.name
+    if not filename.lower().endswith('zip'):
+        res["error"] = RET.DATAERR
+        res["errmsg"] = "上传的图片和xml文件请打包zip格式上传"
+        return JsonResponse(res)
+    ZZ_PLATFORM_DIR = os.path.dirname(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
+    files_dir = os.path.join(ZZ_PLATFORM_DIR, "sdk_precision/input/files").replace("\\", "/")
+    file_name = os.path.join(files_dir, filename).replace("\\", "/")
+    destination = open(file_name, "wb+")
+    for chunk in file.chunks():
+        destination.write(chunk)
+    destination.close()
+    if alert_info is None:
+        iter_files(files_dir, port, tag_names)
+    else:
+        iter_files(files_dir, port, tag_names, alert_info)
+    files_dir = os.path.join(ZZ_PLATFORM_DIR, "sdk_precision/main.py")
+    cmd = f"python3 {files_dir}"
+    res_p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    if res_p.stderr.readline().decode('utf-8') is not '' or res_p.poll() != 0:
+        res["error"] = RET.DATAERR
+        res["errmsg"] = "运行脚本失败"
+        return JsonResponse(res)
+    os.system(cmd)
+    clear_dirs()
+    file_res = os.path.join(ZZ_PLATFORM_DIR, "sdk_precision/output/output.txt")
 
+    with open(file_res, 'r') as f:
+        r = f.read().splitlines()
+    res["errno"] = RET.OK
+    res["errmsg"] = r
 
+    return JsonResponse(res)
 
