@@ -1,0 +1,24 @@
+{
+    "enable_draw_panel": true,
+    "line_width": 4,
+    "line_color": [
+        0,
+        0,
+        255
+    ],
+    "number_thresh": 0.35,
+    "panel_thresh": 0.35,
+    
+    "enable_draw_result": true,
+    "font_height": 20,
+    "font_color": [
+        0,
+        0,
+        255
+    ],
+    "font_bg_color": [
+        0,
+        0,
+        0
+    ]
+}

@@ -1,0 +1,45 @@
+I0730 08:59:35.141742    33 test.cpp:705] version info:
+	EV_SDK_VERSION: 3.0.3
+	EV_LICENSE_VERSION: 20.1.3
+I0730 08:59:35.142503    33 test.cpp:814] run params info:
+	fuction: 1.ji_calc_frame
+	license: license.txt
+	infile: /zhengzhong/yyy.jpg
+	args: 
+	outfile: 
+	repeat:1
+I0730 08:59:35.142575    33 test.cpp:838] license info:
+	license: 234d9931e96991873f3206a2bbeb07617b79e32ddac1d62318db7231686b445465f73fd164bf49bcf4104bb1f173c53c9a4c21228763bc63666f603bd97e24f44d8aaa2ac4ccdb67ae936c33d2b00248b09fa6397da682d02c4cea9f0b586a3f763e98fe67fbbf228b5ff66ea30e6c4a02294bce48c8662ca56bb4803883328e
+	url: 
+	activation: 
+	timestamp: 
+	qps: 
+	version:7
+I0730 08:59:35.142581    33 ji.cpp:201] EV_SDK version:3.0.3
+I0730 08:59:35.142587    33 ji.cpp:202] EV_ALGO version:v0.0.2
+I0730 08:59:35.142591    33 ji.cpp:208] License version:20.1.3
+sginfo(open): No such file or directory
+file=/dev/sda, or no corresponding sg device found
+Is sg driver loaded?
+I0730 08:59:35.148380    33 ji.cpp:257] Parsing configuration file: /usr/local/ev_sdk/config/algo_config.json
+[0;33mW0730 08:59:35.148574    33 Configuration.hpp:208] parsing roi:POLYGON((0 0, 1 0, 1 1, 0 1))
+[mI0730 08:59:35.149253    33 ji.cpp:268] config init:0.7
+I0730 08:59:35.338479    33 lpr.cpp:23] LPR init done
+[0;33mW0730 08:59:35.339900    33 Configuration.hpp:208] parsing roi:POLYGON((0 0, 1 0, 1 1, 0 1))
+[mI0730 08:59:35.376524    33 lpr.cpp:105] plate:蒙ABA365 conf:0.982532
+I0730 08:59:35.379485    33 test.cpp:190] call ji_calc_frame, return 0
+I0730 08:59:35.379496    33 test.cpp:194] event info:
+	code: 0
+	json: {
+	"alert_flag":	1,
+	"detect_info":	[{
+			"x":	218,
+			"y":	116,
+			"height":	32,
+			"width":	116,
+			"plate":	"蒙ABA365"
+		}],
+	"message":	"object is being detected",
+	"num_of_count":	1
+}
+I0730 08:59:35.380494    33 test.cpp:239] Input image not modfied.

@@ -1,0 +1,9 @@
+{
+    "draw_roi_area": true,
+    "roi_color": [255, 255, 0, 0.7],
+    "roi": ["POLYGON((0 0, 1 0, 1 1, 0 1))"],
+    "roi_line_thickness": 4,
+    "draw_result": true,
+    "draw_confidence": true,
+    "thresh": 0.7
+}

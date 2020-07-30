@@ -1,0 +1,11 @@
+实现未授权返回-999
+验证工程路径与规范一致
+test.cpp和makefile:OK
+移动到任意目录:ERROR
+libji.so链接所有库:OK
+配置文件路径正确:OK
+配置文件readme路径错误:ERROR
+公私钥位置，名称验证:OK
+模型路径，名称验证:ERROR
+{'draw_roi_area': False}配置动态传入报错
+{'roi_color': [178, 178, 20, 0]}配置动态传入报错

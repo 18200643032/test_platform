@@ -1,0 +1,17 @@
+{
+	"total_frames":	1,
+	"alert_frames":	1,
+	"detail":	[{
+			"alert_flag":	1,
+			"detect_info":	[{
+					"x":	218,
+					"y":	116,
+					"height":	32,
+					"width":	116,
+					"plate":	"蒙ABA365"
+				}],
+			"message":	"object is being detected",
+			"num_of_count":	1,
+			"timestamp":	40
+		}]
+}

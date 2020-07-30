@@ -1,0 +1,35 @@
+I0730 09:04:01.887857  2042 test.cpp:705] version info:
+	EV_SDK_VERSION: 3.0.3
+	EV_LICENSE_VERSION: 20.1.3
+I0730 09:04:01.888092  2042 test.cpp:814] run params info:
+	fuction: 1.ji_calc_frame
+	license: license.txt
+	infile: /zhengzhong/1.jpg
+	args: 
+	outfile: /zhengzhong/res1.jpg
+	repeat:1
+I0730 09:04:01.888164  2042 test.cpp:838] license info:
+	license: 234d9931e96991873f3206a2bbeb07617b79e32ddac1d62318db7231686b445465f73fd164bf49bcf4104bb1f173c53c9a4c21228763bc63666f603bd97e24f44d8aaa2ac4ccdb67ae936c33d2b00248b09fa6397da682d02c4cea9f0b586a3f763e98fe67fbbf228b5ff66ea30e6c4a02294bce48c8662ca56bb4803883328e
+	url: 
+	activation: 
+	timestamp: 
+	qps: 
+	version:7
+I0730 09:04:01.888173  2042 ji.cpp:201] EV_SDK version:3.0.3
+I0730 09:04:01.888180  2042 ji.cpp:202] EV_ALGO version:v0.0.2
+I0730 09:04:01.888182  2042 ji.cpp:208] License version:20.1.3
+sginfo(open): No such file or directory
+file=/dev/sda, or no corresponding sg device found
+Is sg driver loaded?
+I0730 09:04:01.894207  2042 ji.cpp:257] Parsing configuration file: /usr/local/ev_sdk/config/algo_config.json
+[0;31mE0730 09:04:01.894279  2042 test.cpp:131] *** Aborted at 1596099841 (unix time) try "date -d @1596099841" if you are using GNU date ***
+[m[0;31mE0730 09:04:01.895023  2042 test.cpp:131] PC: @     0x7f9190d0875e Configuration::parseAndUpdateArgs()
+[m[0;31mE0730 09:04:01.895170  2042 test.cpp:131] *** SIGSEGV (@0x18) received by PID 2042 (TID 0x7f9191318ac0) from PID 24; stack trace: ***
+[m[0;31mE0730 09:04:01.895706  2042 test.cpp:131]     @     0x7f918d8524b0 (unknown)
+[m[0;31mE0730 09:04:01.896198  2042 test.cpp:131]     @     0x7f9190d0875e Configuration::parseAndUpdateArgs()
+[m[0;31mE0730 09:04:01.896690  2042 test.cpp:131]     @     0x7f9190d0628a ji_create_predictor
+[m[0;31mE0730 09:04:01.896735  2042 test.cpp:131]     @           0x40d24c main
+[m[0;31mE0730 09:04:01.897258  2042 test.cpp:131]     @     0x7f918d83d830 __libc_start_main
+[m[0;31mE0730 09:04:01.897300  2042 test.cpp:131]     @           0x409ad9 _start
+[m[0;31mE0730 09:04:01.897768  2042 test.cpp:131]     @                0x0 (unknown)
+[m
