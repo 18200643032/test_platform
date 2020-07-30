@@ -44,7 +44,7 @@ def iter_files(rootDir, port, names, alert_info="alert_info", host="127.0.0.1"):
                 txt_create(file, root, host, port, names, alert_info)
 
         for dir in dirs:
-            iter_files(dir)
+            iter_files(dir, port, names, alert_info="alert_info", host="127.0.0.1")
         print(root)
 
 

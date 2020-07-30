@@ -649,7 +649,6 @@ with open(output_files_path + "/output.txt", 'w') as output_file:
     print(text)
 
 
-
 """
  Count total of detection-results
 """

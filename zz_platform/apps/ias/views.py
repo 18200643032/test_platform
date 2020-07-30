@@ -6,6 +6,7 @@ from django.views.decorators.http import require_http_methods #判断状态
 from django.http import JsonResponse #返回JSON
 import subprocess,requests,os
 from config.response_codes import RET
+import zipfile
 
 from sdk_precision.run import iter_files, clear_dirs
 path= os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))) #zz_platform目录
@@ -62,11 +63,11 @@ def ias(request):
 
 
 
-
+#测试算法准确率
 @require_http_methods(["POST"])
 def get_files_result(request):
     res = {}
-    file = request.FILE.get("file")
+    file = request.FILES.get("file")
     tag_names = request.POST.get('tag_name')
     alert_info = request.POST.get('alert_info')
     port = request.POST.get('port')
@@ -87,6 +88,8 @@ def get_files_result(request):
     for chunk in file.chunks():
         destination.write(chunk)
     destination.close()
+    with zipfile.ZipFile(file_name, 'r') as f:
+        f.extractall(files_dir)
     if alert_info is None:
         iter_files(files_dir, port, tag_names)
     else:
@@ -109,3 +112,10 @@ def get_files_result(request):
 
     return JsonResponse(res)
 
+
+
+
+#封装vas
+@require_http_methods(["POST"])
+def vas(request):
+    pass
